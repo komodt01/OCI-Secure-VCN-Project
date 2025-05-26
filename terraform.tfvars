@@ -1,0 +1,6 @@
+tenancy_ocid       = "ocid1.tenancy.oc1..example"
+user_ocid          = "ocid1.user.oc1..example"
+fingerprint        = "aa:bb:cc:dd:ee"
+private_key_path   = "/home/user/.oci/oci_api_key.pem"
+region             = "us-phoenix-1"
+compartment_ocid   = "ocid1.compartment.oc1..example"
