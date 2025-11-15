@@ -82,4 +82,4 @@ These reduce NAT dependency and overall gateway costs.
 - Peering bandwidth charges in multi-VCN designs  
 
 These are not part of the current project but should be considered in expansions.
-s
+
