@@ -1,6 +1,5 @@
 # Compliance Mapping  
-**Project:** OCI Secure VCN Project  
-**Generated:** 2025-11-13  
+**Project:** OCI Secure VCN Project    
 **Cloud:** Oracle Cloud Infrastructure (OCI)
 
 This document maps the security controls implemented in the OCI Secure VCN Project to common industry frameworks.  
