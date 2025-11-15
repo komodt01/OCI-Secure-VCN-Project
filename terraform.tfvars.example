@@ -1,0 +1,6 @@
+tenancy_ocid   = ""
+user_ocid      = ""
+fingerprint    = ""
+private_key_path = "~/.oci/key.pem"
+region         = "us-phoenix-1"
+compartment_ocid = ""
