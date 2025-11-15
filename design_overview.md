@@ -1,6 +1,5 @@
 # Design Overview  
-**Project:** OCI Secure VCN Project  
-**Generated:** 2025-11-13  
+**Project:** OCI Secure VCN Project   
 **Cloud:** Oracle Cloud Infrastructure (OCI)
 
 ---
