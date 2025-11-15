@@ -1,6 +1,5 @@
 # Teardown Guide  
-**Project:** OCI Secure VCN Project  
-**Generated:** 2025-11-13  
+**Project:** OCI Secure VCN Project   
 **Cloud:** Oracle Cloud Infrastructure (OCI)
 
 This guide provides safe, repeatable steps to remove all OCI resources deployed by this Terraform project.  
