@@ -1,17 +1,32 @@
-# OCI Secure VCN Terraform Project
+# OCI Secure VCN Project
 
-## 📌 Business Case
-This project demonstrates how to provision a secure Virtual Cloud Network (VCN) in Oracle Cloud Infrastructure (OCI) using Terraform. It provides a reproducible, automated way to deploy network infrastructure with secure key-based authentication, ensuring consistent environments for development, testing, or production use.
+## 📌 Overview
+This project provisions a **secure Virtual Cloud Network (VCN)** in Oracle Cloud Infrastructure (OCI) using Terraform.  
+It establishes a hardened, repeatable network foundation that supports application, database, and security workloads while enforcing strong baseline controls for identity, routing, segmentation, and governance.
+
+The design ensures:
+- Least-privilege IAM access
+- Segmented public and private subnets
+- Secure outbound-only internet access for private resources (NAT)
+- Enforced Infrastructure-as-Code change control
+- Full auditability via OCI Audit Service
+
+This project serves as a reusable foundation for future OCI projects and multi-cloud portfolio work.
+
+---
 
 ## 🧰 Technologies Used
+
 | Technology              | What It Is                                                                 | Why It Was Used                                               |
 |------------------------|-----------------------------------------------------------------------------|---------------------------------------------------------------|
-| **Terraform**          | Infrastructure as Code (IaC) tool                                          | To declaratively define and provision OCI infrastructure      |
-| **Oracle Cloud (OCI)** | Public cloud platform from Oracle                                          | Target environment for provisioning a secure Virtual Network  |
-| **Terraform Provider** | Plugin that connects Terraform to external APIs                            | `oracle/oci` provider allows Terraform to interact with OCI   |
-| **RSA Key Pair**       | Secure authentication method using public/private keys                     | Used to authenticate Terraform provider requests to OCI       |
-| **Ubuntu WSL2**        | Linux environment on Windows via Windows Subsystem for Linux (WSL2)        | Local execution environment for Terraform and file operations |
-| **Visual Studio Code** | Source code editor with integrated terminal                                | Used to manage `.tf`, `.tfvars`, and key files                |
+| **Terraform**          | Infrastructure as Code (IaC) tool                                          | Enables repeatable, declarative provisioning of OCI resources |
+| **Oracle Cloud (OCI)** | Oracle’s public cloud platform                                             | Target environment for secure network provisioning            |
+| **OCI Terraform Provider** | Plugin enabling Terraform–OCI API integration                         | Required to create VCNs, gateways, route tables, IAM policies |
+| **RSA Key Pair**       | Asymmetric authentication mechanism                                        | Used for secure provider authentication into OCI APIs         |
+| **Ubuntu WSL2**        | Linux subsystem for Windows                                                | Execution environment for Terraform and key generation        |
+| **Visual Studio Code** | Source code editor                                                         | For authoring and managing Terraform configurations           |
+
+---
 
 ## 🧪 Commands Used
 
@@ -31,13 +46,9 @@ openssl genrsa -out ~/.oci/oci_secure_vcn_key.pem 2048
 openssl rsa -pubout -in ~/.oci/oci_secure_vcn_key.pem -out ~/.oci/oci_secure_vcn_key_public.pem
 chmod 600 ~/.oci/oci_secure_vcn_key.pem
 
-# Terraform flow
+# Terraform workflow
 terraform init -upgrade
 terraform validate
 terraform plan -var-file="terraform.tfvars"
 terraform apply -var-file="terraform.tfvars"
-```
 
-## 🧭 Diagram
-
-![Architecture](architecture.png)
