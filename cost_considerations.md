@@ -76,9 +76,10 @@ These reduce NAT dependency and overall gateway costs.
 ## 4. Hidden Costs to Be Aware Of
 
 ### Although small in this project, these costs can grow if the architecture scales:
-Object Storage buckets for remote Terraform state
-VCN Flow Logs (charged per GB ingested)
-Dynamic Routing Gateway (DRG) if added later
-Peering bandwidth charges in multi-VCN designs
+- Object Storage buckets for remote Terraform state  
+- VCN Flow Logs (charged per GB ingested)  
+- Dynamic Routing Gateway (DRG) if added later  
+- Peering bandwidth charges in multi-VCN designs  
 
-These are not part of the current project but should be considered in expansions
+These are not part of the current project but should be considered in expansions.
+s
