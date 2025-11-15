@@ -1,8 +1,7 @@
 # Lessons Learned
 
 # Lessons Learned  
-**Project:** OCI Secure VCN Project  
-**Generated:** 2025-11-13  
+**Project:** OCI Secure VCN Project   
 **Cloud:** Oracle Cloud Infrastructure (OCI)
 
 This project provided hands-on experience designing, deploying, and managing a secure Virtual Cloud Network (VCN) in OCI using Terraform.  
