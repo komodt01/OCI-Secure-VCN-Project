@@ -21,7 +21,7 @@ Although the architecture is lightweight and intended for lab use, specific comp
 | Audit Logs                | Free (Object Storage billed) | Exported logs incur Object Storage costs                    |
 
 
-2. Monthly Cost Estimate
+## 2. Monthly Cost Estimate
 Based on a typical lab setup where the NAT Gateway runs continuously:
 NAT Gateway
 $0.045 per hour
@@ -34,7 +34,7 @@ Gateway uptime
 Whether logs are exported
 Any additional networking or DRG usage
 
-3. Cost Optimization Opportunities
+## 3. Cost Optimization Opportunities
 A. Disable NAT Gateway When Not Needed
 If private subnet workloads do not require outbound access (e.g., early-phase build testing), the NAT Gateway can be commented out in Terraform to eliminate the main recurring cost.
 B. Tear Down Environments After Use
@@ -67,7 +67,7 @@ Function-as-a-Service (no NAT required)
 VCN Flow Logs for observability without NAT routing
 These design patterns can dramatically reduce traffic-based gateway spend.
 
-4. Hidden Costs to Be Aware Of
+## 4. Hidden Costs to Be Aware Of
 Although minimal in this specific project, the following costs can increase as your OCI footprint grows:
 Object Storage buckets (for remote Terraform state or log exports)
 VCN Flow Logs (charged per GB ingested)
