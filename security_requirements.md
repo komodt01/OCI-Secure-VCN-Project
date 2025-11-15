@@ -1,6 +1,5 @@
 # Security Requirements  
 **Project:** OCI Secure VCN Project  
-**Generated:** 2025-11-13  
 **Cloud:** Oracle Cloud Infrastructure (OCI)
 
 ---
