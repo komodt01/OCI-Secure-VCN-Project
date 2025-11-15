@@ -48,3 +48,37 @@ Because this is a development/lab-focused deployment, destroying the infrastruct
 Use:
 ```bash
 terraform destroy -var-file="terraform.tfvars"
+
+### **C. Use Budget Alerts
+
+OCI Budgets allow creation of:
+Spending alerts
+Forecast alerts
+Cost anomaly detection
+These are useful for both personal projects and enterprise production governance.
+
+### ** D. Log Storage Optimization
+While Audit Logs are free, exporting them to Object Storage generates:
+Storage cost
+Lifecycle cost (if configured)
+If high log volume is not required, keep short retention windows
+
+### **E. NAT-Free Architecture (Advanced Option)
+For specific workloads, alternatives include:
+Private-only compute with service gateways
+Bastion-based access
+Use of Function-as-a-Service
+VCN Flow Logs for observability without NAT traffic
+These reduce NAT dependency and overall gateway costs.
+
+---
+
+## 4. Hidden Costs to Be Aware Of
+
+###Although small in this project, these costs can grow if the architecture scales:
+Object Storage buckets for remote Terraform state
+VCN Flow Logs (charged per GB ingested)
+Dynamic Routing Gateway (DRG) if added later
+Peering bandwidth charges in multi-VCN designs
+
+These are not part of the current project but should be considered in expansions
